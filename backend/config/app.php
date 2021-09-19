@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Clean Service Providers...
+         */
+        Clean\App\Providers\AppServiceProvider::class,
+
     ],
 
     /*

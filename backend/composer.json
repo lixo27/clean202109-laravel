@@ -28,10 +28,15 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Clean\\Core\\": "../Core/packages/core/src/",
-            "Clean\\Core\\Customers\\": "../Core/packages/core-customers/src/",
-            "Clean\\Laravel\\Infra\\": "../Laravel/packages/laravel-infra/src/",
-            "Clean\\Laravel\\Interfaces\\": "../Laravel/packages/laravel-interfaces/src/"
+            "Clean\\App\\Providers\\": "../packages/app-providers/src/",
+            "Clean\\Application\\Customers\\": "../packages/application-customers/src/",
+            "Clean\\Application\\Foundation\\": "../packages/application-foundation/src/",
+            "Clean\\Domain\\Customers\\": "../packages/domain-customers/src/",
+            "Clean\\Domain\\Foundation\\": "../packages/domain-foundation/src/",
+            "Clean\\Infra\\Data\\": "../packages/infra-data/src/",
+            "Clean\\Infra\\Events\\": "../packages/infra-events/src/",
+            "Clean\\Infra\\Uuid\\": "../packages/infra-uuid/src/",
+            "Clean\\Interfaces\\Api\\": "../packages/interfaces-api/src/"
         }
     },
     "autoload-dev": {

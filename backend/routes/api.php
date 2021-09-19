@@ -1,6 +1,6 @@
 <?php
 
-use Clean\Laravel\Interfaces\Http\Controllers\Customers\StoreCustomerController;
+use Clean\Interfaces\Api\Http\Controllers\Customers\StoreCustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
