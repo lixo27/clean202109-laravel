@@ -31,10 +31,7 @@ final class CustomerRepository implements CustomerRepositoryInterface
 
     public function add(Customer $customer): void
     {
-        $customerModel = new CustomerModel();
-        $customerModel->id = $customer->getIdentity()->value();
-        $customerModel->name = $customer->getName()->getFullName();
-
+        $customerModel = CustomerModel::fromEntity($customer);
         $customerModel->save();
     }
 }
