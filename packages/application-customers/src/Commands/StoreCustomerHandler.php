@@ -1,9 +1,10 @@
 <?php
 
-namespace Clean\Application\Customers\Contracts;
+namespace Clean\Application\Customers\Commands;
 
 use Clean\Application\Customers\Commands\StoreCustomer;
 use Clean\Application\Customers\Commands\StoreCustomerResponse;
+use Clean\Application\Customers\Contracts\StoreCustomerHandlerInterface;
 use Clean\Application\Customers\Events\StoredCustomer;
 use Clean\Application\Foundation\Contracts\DispatcherInterface;
 use Clean\Domain\Customers\Contracts\CustomerFactoryInterface;
