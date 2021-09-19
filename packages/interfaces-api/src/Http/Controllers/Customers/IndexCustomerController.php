@@ -2,26 +2,23 @@
 
 namespace Clean\Interfaces\Api\Http\Controllers\Customers;
 
-use Clean\Application\Customers\Commands\StoreCustomer;
-use Clean\Application\Customers\Contracts\StoreCustomerHandlerInterface;
+use Clean\Application\Customers\Contracts\GetCustomersHandlerInterface;
+use Clean\Application\Customers\Queries\GetCustomers;
 use Clean\Interfaces\Api\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
-class StoreCustomerController extends Controller
+class GetCustomersController extends Controller
 {
-    private StoreCustomerHandlerInterface $storeCustomerHandler;
+    private GetCustomersHandlerInterface $getCustomersHandler;
 
-    public function __construct(StoreCustomerHandlerInterface $storeCustomerHandler)
+    public function __construct(GetCustomersHandlerInterface $getCustomersHandler)
     {
-        $this->storeCustomerHandler = $storeCustomerHandler;
+        $this->getCustomersHandler = $getCustomersHandler;
     }
 
-    public function __invoke(Request $request)
+    public function __invoke()
     {
-        $command = new StoreCustomer();
-        $command->name = $request->get('name');
-
-        $response = $this->storeCustomerHandler->execute($command);
+        $query = new GetCustomers();
+        $response = $this->getCustomersHandler->execute($query);
 
         return response()->json([
             'status' => 'success',
