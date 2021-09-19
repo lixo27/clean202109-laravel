@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Core\Contracts;
+namespace Clean\Domain\Foundation\Contracts;
 
 interface EntityInterface
 {

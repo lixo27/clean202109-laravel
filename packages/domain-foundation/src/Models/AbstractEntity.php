@@ -1,9 +1,9 @@
 <?php
 
-namespace Clean\Core\Models;
+namespace Clean\Domain\Foundation\Models;
 
-use Clean\Core\Contracts\EntityInterface;
-use Clean\Core\Contracts\IdentityInterface;
+use Clean\Domain\Foundation\Contracts\EntityInterface;
+use Clean\Domain\Foundation\Contracts\IdentityInterface;
 
 abstract class AbstractEntity implements EntityInterface
 {
