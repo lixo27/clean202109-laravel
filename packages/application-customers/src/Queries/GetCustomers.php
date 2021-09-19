@@ -2,7 +2,7 @@
 
 namespace Clean\Application\Customers\Queries;
 
-final class GetAllCustomers
+final class GetCustomers
 {
     // ...
 }

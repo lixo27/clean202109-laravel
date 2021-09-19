@@ -3,9 +3,9 @@
 namespace Clean\Application\Customers\Queries;
 
 use Clean\Application\Customers\Contracts\CustomerFinderInterface;
-use Clean\Application\Customers\Contracts\GetAllCustomersHandlerInterface;
+use Clean\Application\Customers\Contracts\GetCustomersHandlerInterface;
 
-final class GetAllCustomersHandler implements GetAllCustomersHandlerInterface
+final class GetCustomersHandler implements GetCustomersHandlerInterface
 {
     private CustomerFinderInterface $customerFinder;
 
@@ -14,9 +14,9 @@ final class GetAllCustomersHandler implements GetAllCustomersHandlerInterface
         $this->customerFinder = $customerFinder;
     }
 
-    public function execute(GetAllCustomers $query): GetAllCustomersResponse
+    public function execute(GetCustomers $query): GetCustomersResponse
     {
-        return GetAllCustomersResponse::fromArray(
+        return GetCustomersResponse::fromArray(
             $this->customerFinder->findAll()
         );
     }
