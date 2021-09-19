@@ -8,9 +8,9 @@ use Clean\Core\Contracts\IdentityInterface;
 class Customer implements EntityInterface
 {
     private IdentityInterface $identity;
-    private string $name;
+    private Name $name;
 
-    public function __construct(IdentityInterface $identity, string $name)
+    public function __construct(IdentityInterface $identity, Name $name)
     {
         $this->identity = $identity;
         $this->name = $name;
@@ -21,7 +21,7 @@ class Customer implements EntityInterface
         return $this->identity;
     }
 
-    public function getName(): string
+    public function getName(): Name
     {
         return $this->name;
     }

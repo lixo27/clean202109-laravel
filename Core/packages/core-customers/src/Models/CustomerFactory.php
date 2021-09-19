@@ -17,6 +17,6 @@ class CustomerFactory implements CustomerFactoryInterface
     public function create(string $name): Customer
     {
         $identity = $this->identityFactory->create();
-        return new Customer($identity, $name);
+        return new Customer($identity, new Name($name));
     }
 }
