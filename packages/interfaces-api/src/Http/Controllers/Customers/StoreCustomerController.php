@@ -1,8 +1,8 @@
 <?php
 
-namespace Clean\Laravel\Interfaces\Http\Controllers\Customers;
+namespace Clean\Interfaces\Api\Http\Controllers\Customers;
 
-use App\Http\Controllers\Controller;
+use Clean\Interfaces\Api\Http\Controllers\Controller;
 
 class StoreCustomerController extends Controller
 {
