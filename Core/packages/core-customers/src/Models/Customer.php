@@ -2,23 +2,17 @@
 
 namespace Clean\Core\Customer\Models;
 
-use Clean\Core\Contracts\EntityInterface;
 use Clean\Core\Contracts\IdentityInterface;
+use Clean\Core\Models\AbstractEntity;
 
-class Customer implements EntityInterface
+class Customer extends AbstractEntity
 {
-    private IdentityInterface $identity;
     private Name $name;
 
     public function __construct(IdentityInterface $identity, Name $name)
     {
-        $this->identity = $identity;
+        parent::__construct($identity);
         $this->name = $name;
-    }
-
-    public function getIdentity(): IdentityInterface
-    {
-        return $this->identity;
     }
 
     public function getName(): Name
