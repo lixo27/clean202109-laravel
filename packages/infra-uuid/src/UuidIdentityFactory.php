@@ -1,9 +1,9 @@
 <?php
 
-namespace Clean\Laravel\Infra\Uuid;
+namespace Clean\Infra\Uuid;
 
-use Clean\Core\Contracts\IdentityFactoryInterface;
-use Clean\Core\Contracts\IdentityInterface;
+use Clean\Domain\Foundation\Contracts\IdentityFactoryInterface;
+use Clean\Domain\Foundation\Contracts\IdentityInterface;
 use Illuminate\Support\Str;
 
 final class UuidIdentityFactory implements IdentityFactoryInterface

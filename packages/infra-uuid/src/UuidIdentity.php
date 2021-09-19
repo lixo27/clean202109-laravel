@@ -1,8 +1,8 @@
 <?php
 
-namespace Clean\Laravel\Infra\Uuid;
+namespace Clean\Infra\Uuid;
 
-use Clean\Core\Models\AbstractIdentity;
+use Clean\Domain\Foundation\Models\AbstractIdentity;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 
