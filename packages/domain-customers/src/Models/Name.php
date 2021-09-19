@@ -1,8 +1,8 @@
 <?php
 
-namespace Clean\Core\Customers\Models;
+namespace Clean\Domain\Customers\Models;
 
-use Clean\Core\Contracts\ValueObjectInterface;
+use Clean\Domain\Foundation\Contracts\ValueObjectInterface;
 
 class Name implements ValueObjectInterface
 {

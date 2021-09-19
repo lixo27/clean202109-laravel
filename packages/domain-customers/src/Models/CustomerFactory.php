@@ -1,9 +1,9 @@
 <?php
 
-namespace Clean\Core\Customers\Models;
+namespace Clean\Domain\Customers\Models;
 
-use Clean\Core\Contracts\IdentityFactoryInterface;
-use Clean\Core\Customers\Contracts\CustomerFactoryInterface;
+use Clean\Domain\Customers\Contracts\CustomerFactoryInterface;
+use Clean\Domain\Foundation\Contracts\IdentityFactoryInterface;
 
 class CustomerFactory implements CustomerFactoryInterface
 {

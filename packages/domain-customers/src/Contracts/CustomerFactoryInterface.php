@@ -1,8 +1,8 @@
 <?php
 
-namespace Clean\Core\Customers\Contracts;
+namespace Clean\Domain\Customers\Contracts;
 
-use Clean\Core\Customers\Models\Customer;
+use Clean\Domain\Customers\Models\Customer;
 
 interface CustomerFactoryInterface
 {

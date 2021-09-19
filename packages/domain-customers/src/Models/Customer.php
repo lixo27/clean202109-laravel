@@ -1,9 +1,9 @@
 <?php
 
-namespace Clean\Core\Customers\Models;
+namespace Clean\Domain\Customers\Models;
 
-use Clean\Core\Contracts\IdentityInterface;
-use Clean\Core\Models\AbstractEntity;
+use Clean\Domain\Foundation\Contracts\IdentityInterface;
+use Clean\Domain\Foundation\Models\AbstractEntity;
 
 class Customer extends AbstractEntity
 {

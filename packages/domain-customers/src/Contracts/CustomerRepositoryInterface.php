@@ -1,9 +1,9 @@
 <?php
 
-namespace Clean\Core\Customers\Contracts;
+namespace Clean\Domain\Customers\Contracts;
 
-use Clean\Core\Contracts\RepositoryInterface;
-use Clean\Core\Customers\Models\Customer;
+use Clean\Domain\Customers\Models\Customer;
+use Clean\Domain\Foundation\Contracts\RepositoryInterface;
 
 interface CustomerRepositoryInterface extends RepositoryInterface
 {
