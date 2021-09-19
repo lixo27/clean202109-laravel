@@ -18,6 +18,8 @@ final class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadMigrationsFrom(dirname(__DIR__, 2) . '/infra-data/src/Migrations');
+
         call_user_func(function () {
             // application-*
             $this->app->bind(StoreCustomerHandlerInterface::class, StoreCustomerHandler::class);
