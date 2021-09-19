@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Clean\Laravel\Interfaces\Http\Controllers\Customers;

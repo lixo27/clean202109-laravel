@@ -31,7 +31,7 @@
             "Clean\\Core\\": "../Core/packages/core/src/",
             "Clean\\Core\\Customers\\": "../Core/packages/core-customers/src/",
             "Clean\\Laravel\\Infra\\": "../Laravel/packages/laravel-infra/src/",
-            "Clean\\Laravel\\Interfaces\\": "../Laravel/packages/core-interfaces/src/"
+            "Clean\\Laravel\\Interfaces\\": "../Laravel/packages/laravel-interfaces/src/"
         }
     },
     "autoload-dev": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Core\Customer\Models;
+namespace Clean\Core\Customers\Models;
 
 use Clean\Core\Contracts\IdentityInterface;
 use Clean\Core\Models\AbstractEntity;
