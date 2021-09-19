@@ -2,7 +2,7 @@
 
 namespace Clean\Application\Customers\Queries;
 
-final class GetCustomerById
+final class GetCustomer
 {
     public string $id;
 }

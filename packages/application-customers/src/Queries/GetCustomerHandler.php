@@ -3,9 +3,9 @@
 namespace Clean\Application\Customers\Queries;
 
 use Clean\Application\Customers\Contracts\CustomerFinderInterface;
-use Clean\Application\Customers\Contracts\GetCustomerByIdHandlerInterface;
+use Clean\Application\Customers\Contracts\GetCustomerHandlerInterface;
 
-final class GetCustomerByIdHandler implements GetCustomerByIdHandlerInterface
+final class GetCustomerHandler implements GetCustomerHandlerInterface
 {
     private CustomerFinderInterface $customerFinder;
 
@@ -14,10 +14,10 @@ final class GetCustomerByIdHandler implements GetCustomerByIdHandlerInterface
         $this->customerFinder = $customerFinder;
     }
 
-    public function execute(GetCustomerById $query): GetCustomerByIdResponse
+    public function execute(GetCustomer $query): GetCustomerResponse
     {
-        return GetCustomerbyIdResponse::fromArray(
-            $this->customerFinder->findById($query->id)
+        return GetCustomerResponse::fromArray(
+            $this->customerFinder->findOne($query->id)
         );
     }
 }

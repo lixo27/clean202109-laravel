@@ -2,11 +2,11 @@
 
 namespace Clean\Application\Customers\Queries;
 
-final class GetCustomerByIdResponse
+final class GetCustomerResponse
 {
     public array $customers = [];
 
-    public static function fromArray(array $customers): GetCustomerByIdResponse
+    public static function fromArray(array $customers): GetCustomerResponse
     {
         $response = new self();
         $response->customers = $customers;
