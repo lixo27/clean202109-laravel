@@ -9,7 +9,7 @@ final class CustomerFinder implements CustomerFinderInterface
 {
     public function findOne(string $id): array
     {
-        $customer = DB::table('customers')->find($id);
+        $customer = DB::table('customers')->select('id', 'name')->find($id);
 
         return [$customer];
     }

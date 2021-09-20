@@ -3,7 +3,12 @@
 namespace Clean\App\Providers;
 
 use Clean\Application\Customers\Commands\StoreCustomerHandler;
+use Clean\Application\Customers\Contracts\CustomerFinderInterface;
+use Clean\Application\Customers\Contracts\GetCustomerHandlerInterface;
+use Clean\Application\Customers\Contracts\GetCustomersHandlerInterface;
 use Clean\Application\Customers\Contracts\StoreCustomerHandlerInterface;
+use Clean\Application\Customers\Queries\GetCustomerHandler;
+use Clean\Application\Customers\Queries\GetCustomersHandler;
 use Clean\Application\Foundation\Contracts\DispatcherInterface;
 use Clean\Domain\Customers\Contracts\CustomerFactoryInterface;
 use Clean\Domain\Customers\Contracts\CustomerRepositoryInterface;
@@ -11,6 +16,7 @@ use Clean\Domain\Customers\Models\CustomerFactory;
 use Clean\Domain\Foundation\Contracts\IdentityFactoryInterface;
 use Clean\Infra\Data\Repositories\CustomerRepository;
 use Clean\Infra\Events\ApplicationDispatcher;
+use Clean\Infra\Projections\CustomerFinder;
 use Clean\Infra\Uuid\UuidIdentityFactory;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +28,8 @@ final class AppServiceProvider extends ServiceProvider
 
         call_user_func(function () {
             // application-*
+            $this->app->bind(GetCustomerHandlerInterface::class, GetCustomerHandler::class);
+            $this->app->bind(GetCustomersHandlerInterface::class, GetCustomersHandler::class);
             $this->app->bind(StoreCustomerHandlerInterface::class, StoreCustomerHandler::class);
         });
 
@@ -34,6 +42,7 @@ final class AppServiceProvider extends ServiceProvider
             // infra-*
             $this->app->bind(CustomerRepositoryInterface::class, CustomerRepository::class);
             $this->app->bind(DispatcherInterface::class, ApplicationDispatcher::class);
+            $this->app->bind(CustomerFinderInterface::class, CustomerFinder::class);
             $this->app->bind(IdentityFactoryInterface::class, UuidIdentityFactory::class);
         });
     }

@@ -35,6 +35,7 @@
             "Clean\\Domain\\Foundation\\": "../packages/domain-foundation/src/",
             "Clean\\Infra\\Data\\": "../packages/infra-data/src/",
             "Clean\\Infra\\Events\\": "../packages/infra-events/src/",
+            "Clean\\Infra\\Projections\\": "../packages/infra-projections/src/",
             "Clean\\Infra\\Uuid\\": "../packages/infra-uuid/src/",
             "Clean\\Interfaces\\Api\\": "../packages/interfaces-api/src/"
         }

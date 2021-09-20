@@ -1,7 +1,8 @@
 <?php
 
+use Clean\Interfaces\Api\Http\Controllers\Customers\GetCustomerController;
+use Clean\Interfaces\Api\Http\Controllers\Customers\GetCustomersController;
 use Clean\Interfaces\Api\Http\Controllers\Customers\StoreCustomerController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
+Route::get('customers', GetCustomersController::class);
 Route::post('customers', StoreCustomerController::class);
+Route::get('customers/{id}', GetCustomerController::class);
