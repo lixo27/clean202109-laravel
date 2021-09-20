@@ -16,7 +16,7 @@ final class GetCustomerHandler implements GetCustomerHandlerInterface
 
     public function execute(GetCustomer $query): GetCustomerResponse
     {
-        return GetCustomerResponse::fromArray(
+        return GetCustomerResponse::fromObject(
             $this->customerFinder->findOne($query->id)
         );
     }

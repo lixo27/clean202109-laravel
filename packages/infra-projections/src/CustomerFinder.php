@@ -7,17 +7,19 @@ use Illuminate\Support\Facades\DB;
 
 final class CustomerFinder implements CustomerFinderInterface
 {
-    public function findOne(string $id): array
+    public function findOne(string $id): \stdClass
     {
-        $customer = DB::table('customers')->select('id', 'name')->find($id);
+        $query =  DB::table('customers')
+            ->select('id', 'name');
 
-        return [$customer];
+        return $query->find($id);
     }
 
     public function findAll(): array
     {
-        $customers = DB::table('customers')->select('id', 'name')->get();
+        $query = DB::table('customers')
+            ->select('id', 'name');
 
-        return $customers->toArray();
+        return $query->get()->toArray();
     }
 }

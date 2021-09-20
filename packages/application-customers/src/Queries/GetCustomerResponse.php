@@ -4,12 +4,12 @@ namespace Clean\Application\Customers\Queries;
 
 final class GetCustomerResponse
 {
-    public array $customers = [];
+    public \stdClass $customer;
 
-    public static function fromArray(array $customers): GetCustomerResponse
+    public static function fromObject(\stdClass $customer): GetCustomerResponse
     {
         $response = new self();
-        $response->customers = $customers;
+        $response->customer = $customer;
 
         return $response;
     }
