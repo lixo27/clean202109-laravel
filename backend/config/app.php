@@ -179,6 +179,7 @@ return [
          * Clean Service Providers...
          */
         Clean\App\Providers\AppServiceProvider::class,
+        Clean\App\Providers\EventServiceProvider::class,
 
     ],
 
