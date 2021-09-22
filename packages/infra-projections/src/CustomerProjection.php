@@ -5,7 +5,7 @@ namespace Clean\Infra\Projections;
 use Clean\Application\Customers\Contracts\CustomerFinderInterface;
 use Illuminate\Support\Facades\DB;
 
-final class CustomerFinder implements CustomerFinderInterface
+final class CustomerProjection implements CustomerFinderInterface
 {
     public function findOne(string $id): \stdClass
     {

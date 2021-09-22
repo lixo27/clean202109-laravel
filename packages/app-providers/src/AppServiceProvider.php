@@ -16,7 +16,7 @@ use Clean\Domain\Customers\Models\CustomerFactory;
 use Clean\Domain\Foundation\Contracts\IdentityFactoryInterface;
 use Clean\Infra\Data\Repositories\CustomerRepository;
 use Clean\Infra\Events\ApplicationDispatcher;
-use Clean\Infra\Projections\CustomerFinder;
+use Clean\Infra\Projections\CustomerProjection;
 use Clean\Infra\Uuid\UuidIdentityFactory;
 use Illuminate\Support\ServiceProvider;
 
@@ -42,7 +42,7 @@ final class AppServiceProvider extends ServiceProvider
             // infra-*
             $this->app->bind(CustomerRepositoryInterface::class, CustomerRepository::class);
             $this->app->bind(DispatcherInterface::class, ApplicationDispatcher::class);
-            $this->app->bind(CustomerFinderInterface::class, CustomerFinder::class);
+            $this->app->bind(CustomerFinderInterface::class, CustomerProjection::class);
             $this->app->bind(IdentityFactoryInterface::class, UuidIdentityFactory::class);
         });
     }
