@@ -9,7 +9,8 @@ final class CustomerProjection implements CustomerFinderInterface
 {
     public function findOne(string $id): \stdClass
     {
-        $query =  DB::table('customers')
+        $query =  DB::connection('pgsql_read')
+            ->table('customers')
             ->select('id', 'name');
 
         return $query->find($id);
@@ -17,7 +18,8 @@ final class CustomerProjection implements CustomerFinderInterface
 
     public function findAll(): array
     {
-        $query = DB::table('customers')
+        $query = DB::connection('pgsql_read')
+            ->table('customers')
             ->select('id', 'name');
 
         return $query->get()->toArray();
